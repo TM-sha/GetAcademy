@@ -1,5 +1,7 @@
 body {
     background-color: #c5c5c5;
+    height: auto;
+    width: auto;
 }
 
 h1 {
@@ -11,8 +13,8 @@ h1 {
 }
 
 .innhold {
-    margin-top: 2vh;
-    margin-left: 48vw;
+    margin-top: 7vh;
+    margin-left: 920px;
     background-color: #cfcfcf2c;
     color: #1d1d1d;
     display: flex;
@@ -44,7 +46,9 @@ h1 {
 }
 
 .resetbutton {
-    margin-top: 12vh;
-    margin-left: 47vw;
+    margin-top: 14vh;
+    margin-left: 890px;
     cursor: pointer;
+    padding: 5px;
+    font-size: 17px;
 }
