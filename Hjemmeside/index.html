@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tommy's hjemmeside</title>
+    <script src="script.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            width: auto;
+            height: auto;
+            background-color: rgb(109, 109, 109);
+        }
+
+        audio {
+            display: none;
+        }
+
+        .page {
+            background-color: darkgray;
+            display: grid;
+            width: auto;
+            height: 100vh;
+            grid-template-columns: 1fr 10fr;
+            grid-template-rows: 1fr 8r 1fr;
+            grid-template-areas: 'header header'
+                'menu main'
+                'footer footer';
+        }
+
+        .header {
+            display: grid;
+            grid-area: header;
+            background-color: rgb(32, 32, 32);
+            color: #ddd;
+            font-size: xx-large;
+            text-align: center;
+            padding-top: 26px;
+            text-shadow: 0px 2px 3px #ddd;
+        }
+
+        .menu {
+            display: grid;
+            grid-area: menu;
+            background-color: rgb(97, 97, 97);
+            color: #ddd;
+            padding-top: 15px;
+        }
+
+        button {
+            height: 120px;
+            border: none;
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.596);
+            color: #ddd;
+            box-shadow: 0px 1px 8px 2px rgb(56, 56, 56);
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #ddd;
+            color: rgb(32, 32, 32);
+            font-size: large;
+        }
+
+        button:active {
+            box-shadow: none;
+            transform: translateY(2px);
+        }
+
+
+        span {
+            font-size: large;
+            text-transform: uppercase;
+        }
+
+        .main {
+            display: grid;
+            grid-area: main;
+            background-color: dark#e6e6e6;
+        }
+
+        p {
+            font-size: 30px;
+            text-align: center;
+            padding-top: 13vh;
+            padding-right: 116px;
+            font-family: cursive;
+            color: rgb(192, 192, 192);
+        }
+
+        ul {
+            font-size: 25px;
+            padding-left: 20vw;
+            font-family: fantasy;
+        }
+
+        img {
+            margin-left: 31vw;
+            background-color: rgb(155, 163, 163)
+        }
+
+        img:hover {
+            display: none;
+        }
+
+        .footer {
+            display: grid;
+            grid-area: footer;
+            background-color: rgb(32, 32, 32);
+            color: #ddd;
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <audio controls muted autoplay loop preload="auto"
+        src="carl-orff-o-fortuna-carmina-burana-made-with-Voicemod-technology.mp3"></audio>
+    <div class="page">
+        <div class="header">Tommy Misje</div>
+        <div class="menu">
+            <button onclick="showInfo()" id="infoVisited1"><span>om</span></button>
+            <button onclick="showHobby()" id="infoVisited2"><span>hobbyer</span></button>
+            <button onclick="showPic()" id="infoVisited3"><span>bilde</span></button>
+            <button onclick="blackout()" id="infoVisited4"><span>blackout</span></button>
+            <button onclick="resetAll()" id="infoVisited5"><span>reset</span></button>
+        </div>
+
+        <div class="main" id="mainColor">
+            <div class="about" id="aboutMe"></div>
+            <div class="picture" id="pic"></div>
+            <div class="hobbies" id="hobby"></div>
+            <div id="randomcolor"></div>
+            <div id="resetMain"></div>
+        </div>
+
+        <div class="footer">Takk for besøket</div>
+    </div>
+
+</body>
+
+</html>

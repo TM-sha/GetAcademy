@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visuell Teller</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+
+    <h1>Visuell Teller</h1>
+
+    <button onclick="reset()" class="resetbutton">Nullstill teller</button>
+
+
+    <div class="innhold">
+        <button id="pluss" onclick="addNumber()"><b>+</b></button>
+        <div id="tallet">0</div>
+        <button id="minus" onclick="lessNumber()"><b>-</b></button>
+    </div>
+
+    <div id="infotall"></div>
+
+
+
+
+
+    <script>
+        var tallDiv = document.getElementById("tallet");
+        var number = 0;
+        var info = document.getElementById("infotall");
+
+        function addNumber() {
+            info.innerHTML = '';
+            number++
+            tallDiv.innerHTML = number;
+        }
+
+        function lessNumber() {
+            number--
+            tallDiv.innerHTML = number;
+        }
+
+        function reset() {
+            number = 0
+            tallDiv.innerHTML = 0;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+body {
+    background-color: #c5c5c5;
+}
+
+h1 {
+    text-align: center;
+    font-family: monospace;
+    font-size: 50px;
+    color: #ddd;
+    text-shadow: 1px 2px 3px black;
+}
+
+.innhold {
+    margin-top: 2vh;
+    margin-left: 48vw;
+    background-color: #cfcfcf2c;
+    color: #1d1d1d;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: none;
+}
+
+#info {
+    text-align: center;
+    font-size: 40px;
+    color: red;
+}
+
+#pluss:hover {
+    cursor: none;
+    color: green;
+    font-size: 1em;
+}
+
+#minus:hover {
+    cursor: none;
+    color: red;
+    font-size: 1em;
+}
+
+.resetbutton {
+    margin-top: 12vh;
+    margin-left: 47vw;
+    cursor: pointer;
+}
