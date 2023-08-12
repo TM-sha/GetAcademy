@@ -132,7 +132,7 @@ function visKropp() {
                 <button onclick="selectHead4()">
                 ◀
                 </button> 
-                <img src="/img/head1.png" alt="hode">
+                <img src="/Eksempel1/img/head1.png" alt="hode">
 
                 <button onclick="selectHead2()">
                 ▶
@@ -144,7 +144,7 @@ function visKropp() {
                 <button onclick="selectBody4()">
                 ◀
                 </button> 
-                <img src="/img/body1.png" alt="kropp">
+                <img src="/Eksempel1/img/body1.png" alt="kropp">
 
                 <button onclick="selectBody2()">
                 ▶
@@ -156,7 +156,7 @@ function visKropp() {
                 <button onclick="selectLegs4()">
                 ◀
                 </button> 
-                <img src="/img/legs1.png" alt="føtter">
+                <img src="/Eksempel1/img/legs1.png" alt="føtter">
 
                 <button onclick="selectLegs2()">
                 ▶
@@ -175,7 +175,7 @@ function selectHead1() {
     <button onclick="selectHead4()">
         ◀
     </button>
-    <img src="/img/head1.png">
+    <img src="/Eksempel1/img/head1.png">
 
     <button onclick="selectHead2()">
         ▶
@@ -188,7 +188,7 @@ function selectHead2() {
     <button onclick="selectHead1()">
         ◀
     </button>
-    <img src="/img/head2.png">
+    <img src="/Eksempel1/img/head2.png">
 
     <button onclick="selectHead3()">
         ▶
@@ -201,7 +201,7 @@ function selectHead3() {
     <button onclick="selectHead2()">
         ◀
     </button>
-    <img src="/img/head3.png">
+    <img src="/Eksempel1/img/head3.png">
 
     <button onclick="selectHead4()">
         ▶
@@ -214,7 +214,7 @@ function selectHead4() {
     <button onclick="selectHead3()">
         ◀
     </button>
-    <img src="/img/head4.png">
+    <img src="/Eksempel1/img/head4.png">
 
     <button onclick="selectHead1()">
         ▶
@@ -229,7 +229,7 @@ function selectBody1() {
     <button onclick="selectBody4()">
         ◀
     </button>
-    <img src="/img/body1.png">
+    <img src="/Eksempel1/img/body1.png">
 
     <button onclick="selectBody2()">
         ▶
@@ -242,7 +242,7 @@ function selectBody2() {
     <button onclick="selectBody1()">
         ◀
     </button>
-    <img src="/img/body2.png">
+    <img src="/Eksempel1/img/body2.png">
 
     <button onclick="selectBody3()">
         ▶
@@ -255,7 +255,7 @@ function selectBody3() {
     <button onclick="selectBody2()">
         ◀
     </button>
-    <img src="/img/body3.png">
+    <img src="/Eksempel1/img/body3.png">
 
     <button onclick="selectBody4()">
         ▶
@@ -268,7 +268,7 @@ function selectBody4() {
     <button onclick="selectBody3()">
         ◀
     </button>
-    <img src="/img/body4.png">
+    <img src="/Eksempel1/img/body4.png">
 
     <button onclick="selectBody1()">
         ▶
@@ -283,7 +283,7 @@ function selectLegs1() {
     <button onclick="selectLegs4()">
         ◀
     </button>
-    <img src="/img/legs1.png">
+    <img src="/Eksempel1/img/legs1.png">
 
     <button onclick="selectLegs2()">
         ▶
@@ -296,7 +296,7 @@ function selectLegs2() {
     <button onclick="selectLegs1()">
         ◀
     </button>
-    <img src="/img/legs2.png">
+    <img src="/Eksempel1/img/legs2.png">
 
     <button onclick="selectLegs3()">
         ▶
@@ -309,7 +309,7 @@ function selectLegs3() {
     <button onclick="selectLegs2()">
         ◀
     </button>
-    <img src="/img/legs3.png">
+    <img src="/Eksempel1/img/legs3.png">
 
     <button onclick="selectLegs4()">
         ▶
@@ -322,7 +322,7 @@ function selectLegs4() {
     <button onclick="selectLegs3()">
         ◀
     </button>
-    <img src="/img/legs4.png">
+    <img src="/Eksempel1/img/legs4.png">
 
     <button onclick="selectLegs1()">
         ▶
