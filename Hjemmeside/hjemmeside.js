@@ -62,7 +62,7 @@ function showPic() {
     document.getElementById("randomcolor").innerHTML = '';
     document.getElementById("resetMain").innerHTML = '';
 
-    document.getElementById("pic").innerHTML = '<img src="../Hjemmeside/img/bilde.jpg" height="450" width="400" alt="Selvportrett">'
+    document.getElementById("pic").innerHTML = '<img src="../Hjemmeside/img/bilde.jpg" height="450" width="400" title="Ja, få det vekk" alt="Selvportrett">'
 
 
     document.getElementById("mainColor").style.backgroundColor = '#666';
