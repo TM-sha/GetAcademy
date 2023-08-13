@@ -11,8 +11,9 @@ function showInfo() {
        men setter pris på alenetid også.<br><br>
        Tar heller en kaffe fremfor en pils. &raquo; &#128378;</p> `
 
-
+    document.getElementById("hobby").style.display = 'none';
     document.getElementById("mainColor").style.backgroundColor = 'rgb(2, 10, 90)';
+
     document.getElementById("infoVisited1").style.backgroundColor = 'green';
     document.getElementById("infoVisited2").style.backgroundColor = 'rgba(255, 255, 255, 0.596)';
     document.getElementById("infoVisited3").style.backgroundColor = 'rgba(255, 255, 255, 0.596)';
@@ -21,6 +22,7 @@ function showInfo() {
 
 
 function showHobby() {
+
     document.getElementById("aboutMe").innerHTML = '';
     document.getElementById("pic").innerHTML = '';
     document.getElementById("randomcolor").innerHTML = '';
@@ -46,6 +48,15 @@ function showHobby() {
             </ul><br><br>
         </ul> `
 
+    document.getElementById("hobby").style.display = 'inline';
+    document.getElementById("hobby").style.marginTop = '1em;';
+    document.getElementById("hobby").style.marginLeft = '33em';
+    document.getElementById("hobby").style.border = '1px ridge green';
+    document.getElementById("hobby").style.width = '25vw';
+    document.getElementById("hobby").style.height = '53vh';
+    document.getElementById("hobby").style.paddingTop = '15px';
+    document.getElementById("hobby").style.boxShadow = '0px 10px 15px 4px rgb(17, 17, 17)';
+
     document.getElementById("infoVisited1").style.backgroundColor = 'rgba(255, 255, 255, 0.596)';
     document.getElementById("infoVisited2").style.backgroundColor = 'green';
     document.getElementById("infoVisited3").style.backgroundColor = 'rgba(255, 255, 255, 0.596)';
@@ -67,7 +78,7 @@ function showPic() {
 
     document.getElementById("mainColor").style.backgroundColor = '#666';
 
-
+    document.getElementById("hobby").style.display = 'none';
     document.getElementById("infoVisited1").style.backgroundColor = 'rgba(255, 255, 255, 0.596)';
     document.getElementById("infoVisited2").style.backgroundColor = 'rgba(255, 255, 255, 0.596)';
     document.getElementById("infoVisited3").style.backgroundColor = 'green';
@@ -89,6 +100,7 @@ function blackout() {
 
     document.getElementById("mainColor").style.backgroundColor = 'Black'
 
+    document.getElementById("hobby").style.display = 'none';
     document.getElementById("infoVisited1").style.backgroundColor = 'rgba(255, 255, 255, 0.596)';
     document.getElementById("infoVisited2").style.backgroundColor = 'rgba(255, 255, 255, 0.596)';
     document.getElementById("infoVisited3").style.backgroundColor = 'rgba(255, 255, 255, 0.596)';
@@ -103,7 +115,7 @@ function resetAll() {
     document.getElementById("infoVisited3").style.backgroundColor = 'rgba(255, 255, 255, 0.596)';
     document.getElementById("infoVisited4").style.backgroundColor = 'rgba(255, 255, 255, 0.596)';
 
-
+    document.getElementById("hobby").style.display = 'none';
     document.getElementById("aboutMe").innerHTML = '';
     document.getElementById("hobby").innerHTML = '';
     document.getElementById("pic").innerHTML = '';

@@ -40,6 +40,18 @@ audio {
     padding-top: 15px;
 }
 
+.main {
+    display: grid;
+    grid-area: main;
+    background-color: #e6e6e6;
+}
+
+ul {
+    font-size: 25px;
+    padding-left: 5em;
+    font-family: fantasy;
+}
+
 button {
     height: 120px;
     border: none;
@@ -67,11 +79,6 @@ span {
     text-transform: uppercase;
 }
 
-.main {
-    display: grid;
-    grid-area: main;
-    background-color: dark#e6e6e6;
-}
 
 p {
     font-size: 30px;
@@ -82,11 +89,6 @@ p {
     color: rgb(192, 192, 192);
 }
 
-ul {
-    font-size: 25px;
-    padding-left: 20vw;
-    font-family: fantasy;
-}
 
 img {
     margin-left: 31vw;
