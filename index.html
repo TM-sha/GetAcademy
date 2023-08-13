@@ -4,23 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetAcademy v/Tommy</title>
+    <title>Document</title>
 
     <style>
         body {
             margin: 0;
             background-color: rgb(73, 73, 73);
-            height: auto;
-            width: auto;
-        }
-
-        .page {
-            color: rgb(0, 0, 0);
-
-        }
-
-        img {
-            align-content: center;
         }
 
         .header {
@@ -33,29 +22,42 @@
             box-shadow: 0px 0px 8px 3px rgb(0, 0, 0);
         }
 
-        .main {
-            display: inline-block;
-            color: bisque;
-            margin-left: 41vw;
-            margin-top: 2vh;
-            border-radius: 20px;
-            font-size: 25px;
-            box-shadow: 0px 5px 8px 1px rgb(15, 15, 15);
-            height: 20vh;
-            width: 18vw;
+        .page {
+            color: rgb(0, 0, 0);
+            margin-top: 0px;
+            display: none;
         }
 
-        h2 {
-            display: inline-block;
+        ul {
+            color: bisque;
+            background-color: rgb(124, 124, 124);
+            margin-left: 37vw;
+            margin-top: -49px;
+            border-radius: 20px;
+            padding-top: 82px;
+            font-size: 25px;
+            width: 23.1vw;
+            height: 18vh;
+            box-shadow: 0px 5px 8px 1px rgb(15, 15, 15);
+        }
+
+        button {
             font-style: italic;
             color: bisque;
-            font-size: 28px;
+            font-size: 25px;
             background-color: black;
-            border: 1px solid white;
             border-radius: 20px;
-            padding: 10px;
-            margin-left: 43vw;
-            margin-top: 15vh;
+            border: none;
+            padding: 14px;
+            margin-left: 28.4em;
+            margin-top: 55px;
+            width: 25.2vw;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
         }
 
         span {
@@ -64,6 +66,7 @@
 
         li {
             color: white;
+            margin-left: 2em;
         }
 
         a {
@@ -79,23 +82,32 @@
 
 <body>
 
+    <div class="header">Oppgaver/Prosjekter</div>
 
-    <div class="page">
-
-        <div class="header">Oppgaver/Prosjekter</div>
-        <h2 title="Uke nr.1">UKE 1 (<span>GetAcademy</span>)</h2>
-        <div class="main">
-
-            <ul>
-                <li><a href="https://TM-sha.github.io/GetAcademy/Eksempel1"><code>Eksempel 1</code></a></li><br>
-                <li><a href="https://TM-sha.github.io/GetAcademy/Hjemmeside"><code>Ukesoppgave (Nettside)</code></a>
-                </li><br>
-                <li><a href="https://TM-sha.github.io/GetAcademy/VisuellTeller/"><code>Visuell Teller</code></a></li>
-            </ul>
-        </div>
+    <button onclick="toggleList()" title="Vis innhold">UKE 1 (<span>GetAcademy</span>)</button>
+    <div class="page" id="list">
+        <ul>
+            <li><a href="https://TM-sha.github.io/GetAcademy/Eksempel1" title="Gå til"><code>Eksempel 1</code></a></li>
+            <br>
+            <li><a href="https://TM-sha.github.io/GetAcademy/Hjemmeside"
+                    title="Gå til"><code>Ukesoppgave (Nettside)</code></a>
+            </li><br>
+            <li><a href="https://TM-sha.github.io/GetAcademy/VisuellTeller/"
+                    title="Gå til"><code>Visuell Teller</code></a>
+            </li>
+        </ul>
     </div>
 
-
 </body>
+
+<script>
+    function toggleList() {
+        var l = document.getElementById("list");
+
+        if (l.style.display == 'block') {
+            l.style.display = 'none';
+        } else (l.style.display = 'block');
+    }
+</script>
 
 </html>
