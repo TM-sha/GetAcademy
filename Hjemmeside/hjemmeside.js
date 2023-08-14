@@ -31,12 +31,12 @@ function showHobby() {
     document.getElementById("hobby").innerHTML = `
 
     <ul>
-            <li>PC &#127916; &#127918;</li><ul>
+            <li>PC</li><ul>
                 <li style="color: #ddd">Gaming</li>
                 <li style="color: red">YouTube</li>
                 <li style="color: darkred">Netflix</li>
             </ul><br><br>
-            <li>Musikk &#9835</li><ul>
+            <li>Musikk</li><ul>
                 <li style="color: #ddd">Spille gitar</li>
                 <li style="color: #ddd">Spille bass</li>
                 <li style="color: #ddd">Høre på musikk</li>
