@@ -6,10 +6,10 @@ function showInfo() {
     document.getElementById("resetMain").innerHTML = '';
 
     document.getElementById("aboutMe").innerHTML = `
-    <p> &laquo; Jeg er 36 år og bor i Bergen (Åsane bydel).<br><br> Jeg er far til 3 gutter i alderen 3, 5 og 10.
+    <p>Jeg er 36 år og bor i Bergen (Åsane bydel).<br><br> Jeg er far til 3 gutter i alderen 3, 5 og 10.
     <br><br> Har aldri vært borti koding før.<br><br> Er glad i å være sosial, 
        men setter pris på alenetid også.<br><br>
-       Tar heller en kaffe fremfor en pils. &raquo; </p> `
+       Tar heller en kaffe fremfor en pils.</p> `
 
     document.getElementById("hobby").style.display = 'none';
     document.getElementById("mainColor").style.backgroundColor = 'rgb(2, 10, 90)';
