@@ -6,7 +6,8 @@ body {
 }
 
 audio {
-    display: none;
+    display: inline;
+    margin-left: 5px;
 }
 
 .page {
