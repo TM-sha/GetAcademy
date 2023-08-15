@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/fremside.css">
+</head>
+
+<body>
+    <div class="header">Oppgaver/Prosjekter</div>
+
+    <button onclick="toggleList()" title="Vis innhold">UKE 2 (<span>GetAcademy</span>)</button>
+
+    <div class="page" id="list">
+        <ul>
+            <li><a href="" title="Gå til"><code>Funksjon & Parametre</code></a></li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleList() {
+            let l = document.getElementById("list");
+
+            if (l.style.display == 'block') {
+                l.style.display = 'none';
+            } else (l.style.display = 'block');
+        }
+    </script>
+</body>
+
+</html>

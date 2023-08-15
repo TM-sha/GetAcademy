@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funks&Params</title>
+</head>
+
+<body>
+
+    <div id="textDiv">Style 1 (boring)</div>
+
+    <button onclick="changeMe('brown', 55, 'sånn.. ble det..')">Style 2</button>
+    <button onclick="changeMe('green', 25, 'og sånn.. ble det.')">Style 3</button>
+
+
+
+    <script>
+        //Unødvendig med en variabel her, bare for moro skyld.
+        let x = document.getElementById("textDiv");
+
+        function changeMe(color, fontSize, text) {
+            x.innerHTML = /*HTML*/ `
+            <div style="color: ${color}; font-size: ${fontSize}px; ">${text}</div>`;
+        }
+
+    </script>
+
+
+</body>
+
+</html>
