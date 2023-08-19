@@ -1,11 +1,9 @@
 body {
-    width: auto;
     margin: 0;
     background-color: rgb(73, 73, 73);
 }
 
 .header {
-    width: auto;
     font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
@@ -45,7 +43,6 @@ button {
     margin-top: 30vh;
     width: 25.2vw;
     text-align: center;
-    user-select: none;
 }
 
 button:hover {

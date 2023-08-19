@@ -1,38 +1,28 @@
 
 function noLayout() {
-    document.getElementById("allCards").style.display = 'block';
+    document.getElementById("allCards").classList.value = '';
 }
 function vertLayout() {
-    document.getElementById("allCards").style.display = 'flex';
-    document.getElementById("allCards").style.flexDirection = 'column';
+    noLayout();
+    document.getElementById('allCards').classList.add('vertical');
 }
 function horLayout() {
-    document.getElementById("allCards").style.display = 'flex';
-    document.getElementById("allCards").style.flexDirection = 'row';
-    document.getElementById("allCards").style.gap = '20px';
+    noLayout();
+    document.getElementById('allCards').classList.add('horizontal');
 }
 function gridLayout() {
-    document.getElementById("allCards").style.display = 'grid';
-    document.getElementById("allCards").style.gridTemplateColumns = 'repeat(2, 520px)';
-    document.getElementById("allCards").style.width = 'auto';
+    noLayout();
+    document.getElementById('allCards').classList.add('grid');
 }
 
 
-function lukkAlle() {
-    document.getElementById("verktøyTekst").innerHTML = '';
-    document.getElementById("htmlTekst").innerHTML = '';
-    document.getElementById("cssTekst").innerHTML = '';
-    document.getElementById("javaScriptTekst").innerHTML = '';
-    document.getElementById("kroppSynlig").innerHTML = '';
-}
 
 
 
 function visVerktøy() {
     lukkAlle();
 
-
-    document.getElementById("verktøyTekst").innerHTML = `
+    document.getElementById("verktøyTekst").innerHTML = /*HTML*/ `
 
             <div class="innercard"> De to viktigste verktøyene vi skal bruke er disse:
                 <ul>
@@ -58,14 +48,14 @@ function visVerktøy() {
 function visHtml() {
     lukkAlle();
 
-    document.getElementById("htmlTekst").innerHTML = `
+    document.getElementById("htmlTekst").innerHTML = /*HTML*/ `
 
             <div class="innercard" id="innerText2"> Vi bruker HTML til å definere et dokument.
                 <ul>
                     <li>Tagger for grunnleggende oppsett av en HTML-fil</li>
                     <li>Tagger for grunnleggende formatering av tekst</li>
-                    <li><tt>&lt;div&gt;</tt></li> <!--Er det en forskjell på bruk av "tt" kontra "code"?-->
-                    <li><code> &lt;input type="text"&gt;</code></li>
+                    <li><tt>&lt;div&gt;</tt></li> 
+                    <li><tt> &lt;input type="text"&gt;</tt></li>
                     <li><tt>&lt;button&gt;</tt></li>
                     <li><a href="http://https://www.w3schools.com/html/default.asp">W3Schools HTML Tutorial</a></li>
                     <li><a href="http://https://www.w3schools.com/tags/default.asp">W3Schools HTML Reference</a>
@@ -77,20 +67,20 @@ function visHtml() {
 function visCss() {
     lukkAlle();
 
-    document.getElementById("cssTekst").innerHTML = `
+    document.getElementById("cssTekst").innerHTML = /*HTML*/ `
 
             <div class="innercard" id="innerText3">Vi bruker CSS til å
-                <em>style</em><!--Er det en forskjell på bruk av "em" kontra "i"?--> et
+                <i>style</i> et
                 dokument,
                 altså
                 farger, fonter, utseende og lignende.
                 <ul>
                     <li><tt>background-color</tt></li>
-                    <li><code>color</code></li>
+                    <li><tt>color</tt></li>
                     <li><tt>padding</tt></li>
-                    <li><code>margin</code></li>
+                    <li><tt>margin</tt></li>
                     <li><tt>border</tt></li>
-                    <li><code>text-align</code></li>
+                    <li><tt>text-align</tt></li>
                     <li><tt>font-size</tt></li>
                     <li><a href="http://https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox</a></li>
                     <li><a href="http://https://css-tricks.com/snippets/css/complete-guide-grid/">Grid</a></li>
@@ -104,7 +94,7 @@ function visCss() {
 function visJavaScript() {
     lukkAlle();
 
-    document.getElementById("javaScriptTekst").innerHTML = `
+    document.getElementById("javaScriptTekst").innerHTML = /*HTML*/ `
 
             <div class="innercard" id="innerText4"> Det viktigste vi skal lære er programmeringsspråket JavaScript. Vi
                 skal lære
@@ -124,7 +114,7 @@ function visJavaScript() {
 
 function visKropp() {
     lukkAlle();
-    document.getElementById("kroppSynlig").innerHTML = `
+    document.getElementById("kroppSynlig").innerHTML = /*HTML*/ `
 
             <div class="bodies" id="innerText5">
 
@@ -167,10 +157,9 @@ function visKropp() {
             </div> `
 }
 
-
 /*Endre hoder*/
 function selectHead1() {
-    document.getElementById("hode").innerHTML = `
+    document.getElementById("hode").innerHTML = /*HTML*/ `
 
     <button onclick="selectHead4()">
         ◀
@@ -183,7 +172,7 @@ function selectHead1() {
 }
 
 function selectHead2() {
-    document.getElementById("hode").innerHTML = `
+    document.getElementById("hode").innerHTML = /*HTML*/ `
 
     <button onclick="selectHead1()">
         ◀
@@ -196,7 +185,7 @@ function selectHead2() {
 }
 
 function selectHead3() {
-    document.getElementById("hode").innerHTML = `
+    document.getElementById("hode").innerHTML = /*HTML*/ `
 
     <button onclick="selectHead2()">
         ◀
@@ -209,7 +198,7 @@ function selectHead3() {
 }
 
 function selectHead4() {
-    document.getElementById("hode").innerHTML = `
+    document.getElementById("hode").innerHTML = /*HTML*/ `
 
     <button onclick="selectHead3()">
         ◀
@@ -224,7 +213,7 @@ function selectHead4() {
 
 /*Endre kropper*/
 function selectBody1() {
-    document.getElementById("body").innerHTML = `
+    document.getElementById("body").innerHTML = /*HTML*/ `
 
     <button onclick="selectBody4()">
         ◀
@@ -237,7 +226,7 @@ function selectBody1() {
 }
 
 function selectBody2() {
-    document.getElementById("body").innerHTML = `
+    document.getElementById("body").innerHTML = /*HTML*/ `
 
     <button onclick="selectBody1()">
         ◀
@@ -250,7 +239,7 @@ function selectBody2() {
 }
 
 function selectBody3() {
-    document.getElementById("body").innerHTML = `
+    document.getElementById("body").innerHTML = /*HTML*/ `
 
     <button onclick="selectBody2()">
         ◀
@@ -263,7 +252,7 @@ function selectBody3() {
 }
 
 function selectBody4() {
-    document.getElementById("body").innerHTML = `
+    document.getElementById("body").innerHTML = /*HTML*/ `
 
     <button onclick="selectBody3()">
         ◀
@@ -278,7 +267,7 @@ function selectBody4() {
 
 /*Endre bein*/
 function selectLegs1() {
-    document.getElementById("legs").innerHTML = `
+    document.getElementById("legs").innerHTML = /*HTML*/ `
 
     <button onclick="selectLegs4()">
         ◀
@@ -291,7 +280,7 @@ function selectLegs1() {
 }
 
 function selectLegs2() {
-    document.getElementById("legs").innerHTML = `
+    document.getElementById("legs").innerHTML = /*HTML*/ `
 
     <button onclick="selectLegs1()">
         ◀
@@ -304,7 +293,7 @@ function selectLegs2() {
 }
 
 function selectLegs3() {
-    document.getElementById("legs").innerHTML = `
+    document.getElementById("legs").innerHTML = /*HTML*/ `
 
     <button onclick="selectLegs2()">
         ◀
@@ -317,7 +306,7 @@ function selectLegs3() {
 }
 
 function selectLegs4() {
-    document.getElementById("legs").innerHTML = `
+    document.getElementById("legs").innerHTML = /*HTML*/ `
 
     <button onclick="selectLegs3()">
         ◀
@@ -329,3 +318,10 @@ function selectLegs4() {
     </button> `
 }
 
+function lukkAlle() {
+    document.getElementById("verktøyTekst").innerHTML = '';
+    document.getElementById("htmlTekst").innerHTML = '';
+    document.getElementById("cssTekst").innerHTML = '';
+    document.getElementById("javaScriptTekst").innerHTML = '';
+    document.getElementById("kroppSynlig").innerHTML = '';
+}

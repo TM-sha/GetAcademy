@@ -6,40 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StrartIT v/Tommy</title>
     <link rel="stylesheet" href="fremside.css">
-    <!--OBS ikke mobilvennlig for øyeblikket-->
 </head>
 
 <body>
 
     <div class="header">Oppgaver/Prosjekter</div>
-
-    <button onclick="toggleList()" title="Vis innhold">UKE 1 (<span>GetAcademy</span>)</button>
-
-    <div class="page" id="list">
-        <ul>
-            <li><a href="https://TM-sha.github.io/GetAcademy/Eksempel1" title="Gå til"><code>Eksempel 1</code></a></li>
-            <br>
-            <li><a href="https://TM-sha.github.io/GetAcademy/Hjemmeside"
-                    title="Gå til"><code>Ukesoppgave (Nettside)</code></a>
-            </li><br>
-            <li><a href="https://TM-sha.github.io/GetAcademy/VisuellTeller"
-                    title="Gå til"><code>Visuell Teller</code></a>
-            </li>
-            <a href="https://TM-sha.github.io/GetAcademy/SideTo/" style="float: right;">Neste</a>
-        </ul>
+    <div class="main">
+        <button onclick="toggleList()" title="Vis innhold">UKE 1 (<span>GetAcademy</span>)</button>
+        <div class="page" id="divList"></div>
     </div>
+
 
 </body>
 
-<script>
-    function toggleList() {
-        let l = document.getElementById("list");
-
-        if (l.style.display == 'block') {
-            l.style.display = 'none';
-        } else (l.style.display = 'block');
-    }
-</script>
+<script src="uke1.js"></script>
 
 
 </html>

@@ -1,12 +1,5 @@
 body {
     margin-left: 20px;
-    height: auto;
-    width: auto;
-}
-
-
-.cards {
-    display: block;
 }
 
 
@@ -17,6 +10,22 @@ body {
     background-color: lightgray;
 }
 
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 520px);
+    width: auto;
+}
 
 .innercard {
     background-color: lightgray;
@@ -54,9 +63,6 @@ body {
     background-color: rgb(56, 56, 56);
 }
 
-p {
-    padding: 10px;
-}
 
 .bodies {
     display: flex;

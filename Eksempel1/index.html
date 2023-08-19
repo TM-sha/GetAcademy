@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eksempel 1 (oppgave)</title>
-    <script src="eksempel.js"></script>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -17,12 +16,11 @@
         <button onclick="vertLayout()">Vertikal layout</button>
         <button onclick="horLayout()">Horisontal layout</button>
         <button onclick="gridLayout()">Grid layout</button>
-        <button onclick="lukkAlle()">Lukk alle</button>
     </div>
 
     <h1>Eksempel 1</h1>
 
-    <div class="cards" id="allCards">
+    <div id="allCards">
         <div class="card">
             <div class="header green" onclick="visVerktøy()">Verktøy</div>
             <div id="verktøyTekst"></div>
@@ -53,6 +51,8 @@
         </div>
 
     </div>
+
+    <script src="eksempel.js"></script>
 
 </body>
 
