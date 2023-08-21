@@ -1,11 +1,4 @@
-html {
-    height: -webkit-fill-available;
-}
-
 body {
-    height: -webkit-fill-available;
-    display: flex;
-    flex-direction: column;
     margin: 0;
     background-color: rgb(73, 73, 73);
 }
