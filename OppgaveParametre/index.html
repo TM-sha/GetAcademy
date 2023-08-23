@@ -11,8 +11,8 @@
 
     <div id="textDiv">Style 1 (boring)</div>
 
-    <button onclick="changeMe('brown', 55, 'sånn.. ble det..')">Style 2</button>
-    <button onclick="changeMe('green', 25, 'og sånn.. ble det.')">Style 3</button>
+    <button onclick="changeMe('brown', 55, 80, 'sånn.. ble det..')">Style 2</button>
+    <button onclick="changeMe('green', 25, 30, 'og sånn.. ble det.')">Style 3</button>
 
 
 
@@ -20,9 +20,9 @@
         //Unødvendig med en variabel her, bare for moro skyld.
         let x = document.getElementById("textDiv");
 
-        function changeMe(color, fontSize, text) {
+        function changeMe(color, fontSize, height, text) {
             x.innerHTML = /*HTML*/ `
-            <div style="color: ${color}; font-size: ${fontSize}px; ">${text}</div>`;
+            <div style="background-color: ${color}; font-size: ${fontSize}px; height: ${height}px; ">${text}</div>`;
         }
 
     </script>
