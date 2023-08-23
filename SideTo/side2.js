@@ -1,7 +1,5 @@
-let list;
-
-list = true;
-
+let list = false;
+toggleList();
 function toggleList() {
 
     if (list == false) {
