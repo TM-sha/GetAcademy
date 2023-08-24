@@ -1,0 +1,46 @@
+.traficBox {
+    border: 1px solid;
+    border-radius: 20px;
+    width: 200px;
+    height: 315px;
+    background-color: rgb(66, 66, 66);
+}
+
+#imRed,
+#imYellow,
+#imGreen {
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 100px;
+    width: 120px;
+    margin-top: 2.1px;
+    margin-left: 40px;
+}
+
+.r {
+    background-color: black;
+}
+
+.y {
+    background-color: black;
+}
+
+.g {
+    background-color: black;
+}
+
+.redLight {
+    background-color: red;
+}
+
+.yellowLight {
+    background-color: orange;
+}
+
+.greenLight {
+    background-color: green;
+}
+
+#knappene {
+    margin-left: 30px;
+}

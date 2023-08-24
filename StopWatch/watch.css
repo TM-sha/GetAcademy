@@ -1,0 +1,36 @@
+.displayTime {
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 23%;
+    width: 40px;
+    height: 25px;
+    margin-left: 90px;
+    margin-top: 10px;
+    font-size: x-large;
+    background-color: rgb(142, 240, 158);
+    color: rgb(16, 17, 15);
+}
+
+.displayStopped {
+    color: rgb(18, 221, 153);
+    max-height: 40px;
+    padding-top: 10px;
+    margin-left: 100px;
+    margin-top: -30px;
+    overflow-y: scroll;
+
+}
+
+.clockDisplay {
+    background-color: rgb(75, 74, 74);
+    border: 2px solid rgb(20, 19, 19);
+    border-radius: 10%;
+    border-width: 20px;
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+button {
+    border-radius: 50%;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trafikklys</title>
+    <link rel="stylesheet" href="/trafikklys/trafikk.css">
+</head>
+
+<body>
+    <div class="traficBox">
+        <div class="r" id="imRed"></div>
+        <div class="y" id="imYellow"></div>
+        <div class="g" id="imGreen"></div>
+    </div><br>
+
+    <div id="knappene">
+        <button onclick="changeLight(1)">Stopp</button>
+        <button onclick="changeLight(2)">Klar</button>
+        <button onclick="changeLight(3)">Kjør</button>
+        <button onclick="activeLight()">Start Auto Lys</button>
+    </div>
+
+    <script>
+        const stopLight = document.getElementById("imRed");
+        const readyLight = document.getElementById("imYellow");
+        const goLight = document.getElementById("imGreen");
+        let time;
+
+        //Versjon med bruk av parametere;
+        function lightBulb() {
+            setTimeout(function () { changeLight(1) }, 500);
+            setTimeout(function () { changeLight(2) }, 1500);
+            setTimeout(function () { changeLight(3) }, 2500);
+        }
+
+        function activeLight() {
+            setInterval(lightBulb(), 3000)
+        }
+
+        function changeLight(selectedButton) {
+            if (selectedButton == 1) {
+                stopLight.classList.add('redLight');
+                readyLight.classList.remove('yellowLight');
+                goLight.classList.remove('greenLight');
+            }
+
+            else if (selectedButton == 2) {
+                readyLight.classList.add('yellowLight');
+                stopLight.classList.add('redLight');
+                goLight.classList.remove('greenLight');
+            }
+
+            else if (selectedButton == 3) {
+                goLight.classList.add('greenLight');
+                readyLight.classList.remove('yellowLight');
+                stopLight.classList.remove('redLight');
+            }
+        }
+
+        /* Tidligere versjon uten parametere, fungerer helt greit;
+            function changeLight() {
+                time = setTimeout(changeLightR, 2000)
+                stopLight.classList.add('redLight');
+                readyLight.classList.remove('yellowLight');
+                goLight.classList.remove('greenLight');
+            }
+            function changeLight() {
+                time = setTimeout(changeLightG, 2000)
+                readyLight.classList.add('yellowLight');
+                stopLight.classList.add('redLight');
+                goLight.classList.remove('greenLight');
+            }
+            function changeLight() {
+                goLight.classList.add('greenLight');
+                readyLight.classList.remove('yellowLight');
+                stopLight.classList.remove('redLight');
+                clearTimeout(time);
+            }*/
+    </script>
+</body>
+
+</html>

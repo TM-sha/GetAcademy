@@ -1,0 +1,28 @@
+.app {
+    width: 202px;
+    padding: 2%;
+    height: 240px;
+    margin-left: 45%;
+    margin-top: 18%;
+}
+
+.lyspære {
+    background-color: rgba(128, 128, 128, 0.273);
+    height: 200px;
+    width: 200px;
+    border: 1px solid rgb(181, 181, 181);
+    border-radius: 50%;
+}
+
+button {
+    margin-left: 36%;
+    margin-top: 1%;
+}
+
+.infoText {
+    border: 1px dotted white;
+    height: 15px;
+    width: 100px;
+    margin-left: 26%;
+    margin-top: 9%;
+}
