@@ -31,7 +31,7 @@ function toggleList() {
         </li><br>
         
         <li>
-            <a href="https://TM-sha.github.io/GetAcademy../Return" title="Gå til"><code>Return</code></a>
+            <a href="https://TM-sha.github.io/GetAcademy/Return" title="Gå til"><code>Return</code></a>
         </li>
     </ul> `
         list = true;
