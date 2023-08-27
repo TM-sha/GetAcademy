@@ -32,7 +32,11 @@ function toggleList() {
         
         <li>
             <a href="https://TM-sha.github.io/GetAcademy/Return" title="Gå til"><code>Return</code></a>
+            <a href="https://TM-sha.github.io/GetAcademy/SideTre/" style="float: right; color: orange;">Neste</a>
         </li>
+        
+            
+        
     </ul> `
         list = true;
     } else if (list == true) {
