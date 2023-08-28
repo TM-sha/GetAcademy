@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <pre>Det var en gang en <div id="nameIt">___</div> <div id="person">___</div>&nbsp;som het <div id="name">___</div> og kom fra <div id="place">____</div>.
+    </div>
+
+    <button onclick="changeWord(1)">mann</button>
+    <button onclick="changeWord(2)">jente</button>
+    <button onclick="changeWord(3)">gammel</button>
+    <button onclick="changeWord(4)">gutt</button><br>
+    
+    <button onclick="changeWord(5)">Pål</button>
+    <button onclick="changeWord(6)">Celine</button>
+    <button onclick="changeWord(7)">Kamilla</button>
+    <button onclick="changeWord(8)">Espen</button><br>
+
+    <button onclick="changeWord(9)">Oslo</button>
+    <button onclick="changeWord(10)">smart</button>
+    <button onclick="changeWord(11)">ung</button><br>
+
+    <button onclick="changeWord(12)">vakker</button>
+    <button onclick="changeWord(13)">Bergen</button>
+    <button onclick="changeWord(14)">Stavanger</button>
+
+
+    <script>
+        let wordList = ['mann', 'jente', 'gammel', 'gutt', 'Pål', 'Celine', 'Kamilla', 'Espen', 'Oslo', 'smart', 'ung', 'vakker', 'Bergen', 'Stavanger'];
+
+        function changeWord(chosenWord) {
+            if (chosenWord == 1 || chosenWord == 2 || chosenWord == 4) {
+                document.getElementById("person").innerHTML = wordList[chosenWord - 1]
+            }
+            else if (chosenWord == 3 || chosenWord == 10 || chosenWord == 11 || chosenWord == 12) {
+                document.getElementById("nameIt").innerHTML = wordList[chosenWord - 1]
+            }
+            else if (chosenWord == 5 || chosenWord == 6 || chosenWord == 7 || chosenWord == 8) {
+                document.getElementById("name").innerHTML = wordList[chosenWord - 1]
+            }
+            else if (chosenWord == 9 || chosenWord == 13 || chosenWord == 14) {
+                document.getElementById("place").innerHTML = wordList[chosenWord - 1]
+            }
+        }
+    </script>
+
+</body>
+
+</html>
