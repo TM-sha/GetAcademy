@@ -9,23 +9,11 @@
 
 <body>
     <div id="app"></div>
-    <button onclick="changeWord(1)">mann</button>
-    <button onclick="changeWord(2)">jente</button>
-    <button onclick="changeWord(4)">gutt</button><br>
-    <button onclick="changeWord(5)">Pål</button>
-    <button onclick="changeWord(7)">Kamilla</button>
-    <button onclick="changeWord(6)">Celine</button>
-    <button onclick="changeWord(8)">Espen</button><br>
-    <button onclick="changeWord(3)">gammel</button>
-    <button onclick="changeWord(10)">smart</button>
-    <button onclick="changeWord(12)">vakker</button>
-    <button onclick="changeWord(11)">ung</button><br>
-    <button onclick="changeWord(9)">Oslo</button>
-    <button onclick="changeWord(13)">Bergen</button>
-    <button onclick="changeWord(14)">Stavanger</button>
+
+
     <script>
         // model
-        let wordList = ['mann', 'jente', 'gammel', 'gutt', 'Pål', 'Celine', 'Kamilla', 'Espen', 'Oslo', 'smart', 'ung', 'vakker', 'Bergen', 'Stavanger'];
+        let wordList = ['mann', 'kvinne', 'gammel', 'gutt', 'Pål', 'Celine', 'Victoria', 'Espen', 'Oslo', 'smart', 'ung', 'vakker', 'Bergen', 'Stavanger'];
         let description = '___';
         let gender = '___';
         let name = '___';
@@ -36,7 +24,23 @@
         function updateView() {
             document.getElementById('app').innerHTML = /*HTML*/`
 
-            <pre>Det var en gang en ${description} ${gender} som het ${name} og kom fra ${place}. `;
+            <p>Det var en gang en ${description} ${gender} som het ${name} og kom fra ${place}...<br><br>
+               
+            <button onclick="changeWord(1)">mann</button>
+            <button onclick="changeWord(2)">kvinne</button>
+            <button onclick="changeWord(4)">gutt</button><br>
+            <button onclick="changeWord(5)">Pål</button>
+            <button onclick="changeWord(7)">Victoria</button>
+            <button onclick="changeWord(6)">Celine</button>
+            <button onclick="changeWord(8)">Espen</button><br>
+            <button onclick="changeWord(3)">gammel</button>
+            <button onclick="changeWord(10)">smart</button>
+            <button onclick="changeWord(12)">vakker</button>
+            <button onclick="changeWord(11)">ung</button><br>
+            <button onclick="changeWord(9)">Oslo</button>
+            <button onclick="changeWord(13)">Bergen</button>
+            <button onclick="changeWord(14)">Stavanger</button> `;
+
         }
 
 

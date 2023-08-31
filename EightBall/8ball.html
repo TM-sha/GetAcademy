@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 ball</title>
+    <style>
+        body {
+            background-color: rgb(2, 2, 35);
+        }
+
+        .eightBall {
+            display: grid;
+            place-items: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: larger;
+
+        }
+
+        .content {
+            background-color: black;
+            color: rgb(0, 0, 0);
+            display: grid;
+            place-items: center;
+            margin-top: 10%;
+            margin-left: 2%;
+            border: 2px dotted white;
+            border-radius: 250px;
+            height: 500px;
+            width: 500px;
+            user-select: none;
+        }
+
+        #insideBall {
+            display: grid;
+            place-items: center;
+            border: 1px solid black;
+            background-color: rgb(255, 255, 255);
+            border-radius: 100px;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        let answer = ['Yes', "I can't tell you that!!", 'One day, maybe', 'Definitely', 'Perhaps', 'I dont think so', 'Sure', 'Hell no!', 'Absolutely!', 'I think so', 'Ask another question', "It's not impossible", 'If you try harder', 'Ask yourself instead', 'Not this year', 'No way!'];
+        let memory;
+
+
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+            <div class="eightBall">
+                <div class="content" id="showAnswers" onclick="pressForAnswers()"><div id="insideBall">${memory || '"CLICK 4 ANSWERS"'}</div></div>
+            </div>    
+            `;
+        }
+
+
+        function pressForAnswers() {
+            let random = Math.floor(Math.random() * 15);
+            if (answer[random] == memory) {
+                pressForAnswers();
+            }
+            else (memory = answer[random]);
+            updateView();
+        }
+    </script>
+</body>
+
+</html>

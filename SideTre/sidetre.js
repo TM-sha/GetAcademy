@@ -10,6 +10,9 @@ function toggleList() {
             </li><br>
             <li>
                 <a href="https://TM-sha.github.io/GetAcademy/MvcAdjektivfortelling" title="Gå til"><code>Adjektivfortelling</code></a>
+            </li><br>
+            <li>
+                <a href="https://TM-sha.github.io/GetAcademy/ToGangen" title="Gå til"><code>2 gangen</code></a>
             </li>
         </ul> `;
 

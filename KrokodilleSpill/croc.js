@@ -18,7 +18,7 @@ function updateNumbers() {
 }
 
 function getRandomNumber() {
-    return Math.round(Math.random() * 10);
+    return Math.round(Math.random() * 10) + 1;
 }
 
 function checkAnswer() {
