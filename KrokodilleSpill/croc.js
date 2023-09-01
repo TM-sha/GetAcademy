@@ -23,6 +23,7 @@ function getRandomNumber() {
 
 function checkAnswer() {
     let input = document.getElementById("inputText").value;
+    if (input == '') return;
     if (firstNum > secondNum && input == '>') {
         points++;
         pointCounter.innerHTML = 'Poeng: ' + points;
