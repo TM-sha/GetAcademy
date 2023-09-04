@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vokaler</title>
+    <style>
+        .baklengsOrd {
+            margin-top: -180px;
+            margin-left: 175px;
+            color: rgb(95, 212, 95);
+            background-color: rgb(31, 100, 45);
+            width: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        // model
+        let aCounter = '';
+        let eCounter = '';
+        let iCounter = '';
+        let oCounter = '';
+        let uCounter = '';
+        let yCounter = '';
+        let æCounter = '';
+        let øCounter = '';
+        let åCounter = '';
+        let reversedText = '"Baklengs ord kommer her"';
+
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+            <input type="text" id="inputText" placeholder="Text here">
+            <button onclick="getVowels()">Vokalteller</button>
+            <button onclick="reverseMe()">Baklengs-tekst</button>
+            <div>${'Antall A = ' + aCounter}</div><div>${'Antall E = ' + eCounter}</div><div>${'Antall I = ' + iCounter}</div>
+            <div>${'Antall O = ' + oCounter}</div><div>${'Antall U = ' + uCounter}</div><div>${'Antall Y = ' + yCounter}</div>    
+            <div>${'Antall Æ = ' + æCounter}</div><div>${'Antall Ø = ' + øCounter}</div><div>${'Antall Å = ' + åCounter}</div><br>
+
+            <div class="baklengsOrd">${reversedText}</div>
+            
+            `;
+        }
+
+        // controller
+        function getVowels() {
+            aCounter = 0; eCounter = 0; iCounter = 0;
+            oCounter = 0; uCounter = 0; yCounter = 0;
+            æCounter = 0; øCounter = 0; åCounter = 0;
+
+            let inputString = document.getElementById("inputText").value;
+            for (let i = 0; i < inputString.length; i++) {
+                if (inputString.charAt(i) == ("a")) {
+                    aCounter++;
+                }
+                if (inputString.charAt(i) == ("e")) {
+                    eCounter++;
+                }
+                if (inputString.charAt(i) == ("i")) {
+                    iCounter++;
+                }
+                if (inputString.charAt(i) == ("o")) {
+                    oCounter++;
+                }
+                if (inputString.charAt(i) == ("u")) {
+                    uCounter++;
+                }
+                if (inputString.charAt(i) == ("y")) {
+                    yCounter++;
+                }
+                if (inputString.charAt(i) == ("æ")) {
+                    æCounter++;
+                }
+                if (inputString.charAt(i) == ("ø")) {
+                    øCounter++;
+                }
+                if (inputString.charAt(i) == ("å")) {
+                    åCounter++;
+                }
+            }
+            updateView();
+        }
+
+        function reverseMe() {
+            reversedText = '';
+            let inputString = document.getElementById("inputText").value;
+            for (let i = 0; i < inputString.length; i++) {
+                reversedText = inputString.charAt(i) + reversedText;
+            }
+            updateView();
+        }
+    </script>
+</body>
+
+</html>

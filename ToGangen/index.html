@@ -17,16 +17,17 @@
         updateView();
         function updateView() {
             document.getElementById('app').innerHTML = /*HTML*/`
-            <button onclick="pressToShow()">Vis 2 gangen (@ console)</button>
+            <div>${pressToShow()}</div>
             `;
         }
 
         // controller
         function pressToShow() {
             let counter;
+            let counterString = '';
             for (counter = 2; counter <= 20; counter += 2) {
-                console.log(counter);
-            }
+                counterString += `${counter} `;
+            } return counterString;
         }
     </script>
 </body>

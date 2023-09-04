@@ -1,6 +1,4 @@
-function showInfo() {           /*Er fullstendig klar over at koden er meget rotete (en 5 åring kunne gjort bedre xD)
-                                  og ting kunne blitt gjort mye enklere
-                                , men det er dette jeg har på nåverende tidspunkt*/
+function showInfo() {
 
     document.getElementById("hobby").innerHTML = '';
     document.getElementById("pic").innerHTML = '';
