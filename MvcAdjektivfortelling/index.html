@@ -13,7 +13,7 @@
 
     <script>
         // model
-        let wordList = ['mann', 'kvinne', 'gammel', 'gutt', 'Pål', 'Celine', 'Victoria', 'Espen', 'Oslo', 'smart', 'ung', 'vakker', 'Bergen', 'Stavanger'];
+        let wordList = ['mann', 'kvinne', 'gutt', 'gammel', 'smart', 'vakker', 'ung', 'Pål', 'Victoria', 'Celine', 'Espen', 'Oslo', 'Bergen', 'Stavanger'];
         let description = '___';
         let gender = '___';
         let name = '___';
@@ -24,20 +24,20 @@
         function updateView() {
             document.getElementById('app').innerHTML = /*HTML*/`
 
-            <p>Det var en gang en ${description} ${gender} som het ${name} og kom fra ${place}...<br><br>
+            <p>Det var en gang en ${description} ${gender} som het ${name} og kom fra ${place}...</p>
                
             <button onclick="changeWord(1)">mann</button>
             <button onclick="changeWord(2)">kvinne</button>
-            <button onclick="changeWord(4)">gutt</button><br>
-            <button onclick="changeWord(5)">Pål</button>
-            <button onclick="changeWord(7)">Victoria</button>
-            <button onclick="changeWord(6)">Celine</button>
-            <button onclick="changeWord(8)">Espen</button><br>
-            <button onclick="changeWord(3)">gammel</button>
-            <button onclick="changeWord(10)">smart</button>
-            <button onclick="changeWord(12)">vakker</button>
-            <button onclick="changeWord(11)">ung</button><br>
-            <button onclick="changeWord(9)">Oslo</button>
+            <button onclick="changeWord(3)">gutt</button><br>
+            <button onclick="changeWord(4)">gammel</button>
+            <button onclick="changeWord(5)">smart</button>
+            <button onclick="changeWord(6)">vakker</button>
+            <button onclick="changeWord(7)">ung</button><br>
+            <button onclick="changeWord(8)">Pål</button>
+            <button onclick="changeWord(9)">Victoria</button>
+            <button onclick="changeWord(10)">Celine</button>
+            <button onclick="changeWord(11)">Espen</button><br>
+            <button onclick="changeWord(12)">Oslo</button>
             <button onclick="changeWord(13)">Bergen</button>
             <button onclick="changeWord(14)">Stavanger</button> `;
 
@@ -46,16 +46,16 @@
 
         // controller
         function changeWord(chosenWord) {
-            if (chosenWord == 1 || chosenWord == 2 || chosenWord == 4) {
+            if (chosenWord == 1 || chosenWord == 2 || chosenWord == 3) {
                 gender = wordList[chosenWord - 1];
             }
-            else if (chosenWord == 3 || chosenWord == 10 || chosenWord == 11 || chosenWord == 12) {
+            else if (chosenWord == 4 || chosenWord == 5 || chosenWord == 6 || chosenWord == 7) {
                 description = wordList[chosenWord - 1];
             }
-            else if (chosenWord == 5 || chosenWord == 6 || chosenWord == 7 || chosenWord == 8) {
+            else if (chosenWord == 8 || chosenWord == 9 || chosenWord == 10 || chosenWord == 11) {
                 name = wordList[chosenWord - 1];
             }
-            else if (chosenWord == 9 || chosenWord == 13 || chosenWord == 14) {
+            else if (chosenWord == 12 || chosenWord == 13 || chosenWord == 14) {
                 place = wordList[chosenWord - 1];
             }
             updateView();

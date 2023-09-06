@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>2 gangen</title>
 </head>
 
 <body>
@@ -12,6 +12,8 @@
 
     <script>
         // model
+        let counter;
+        let counterString = '';
 
         // view
         updateView();
@@ -23,8 +25,6 @@
 
         // controller
         function pressToShow() {
-            let counter;
-            let counterString = '';
             for (counter = 2; counter <= 20; counter += 2) {
                 counterString += `${counter} `;
             } return counterString;
