@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        // model
+
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+            <div id="showResult"></div>
+            `;
+        }
+
+        // controller
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 50) + 1;
+        }
+
+        function generateAndCheckRandomNumbers() {
+            let firstRandomNumber = getRandomNumber();
+            let secondRandomNumber = getRandomNumber();
+
+            while (firstRandomNumber !== secondRandomNumber) {
+                secondRandomNumber = getRandomNumber();
+            }
+            document.getElementById("showResult").innerHTML =
+                'Equal numbers found: ' + firstRandomNumber + ' ' + secondRandomNumber;
+        }
+        generateAndCheckRandomNumbers();
+    </script>
+</body>
+
+</html>

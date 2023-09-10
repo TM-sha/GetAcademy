@@ -15,7 +15,8 @@ function toggleList() {
                 <a href="https://TM-sha.github.io/GetAcademy/ToGangen" title="Gå til"><code>2 gangen</code></a>
             </li><br>
             <li>
-                <a href="https://TM-sha.github.io/GetAcademy/VokalOppgave" title="Gå til"><code>Vokalteller</code></a>
+                <a href="https://TM-sha.github.io/GetAcademy/VokalOppgave" title="Gå til"><code>Vokalteller</code></a><br><br>
+                <a href="https://TM-sha.github.io/GetAcademy/SideTo/" title="Forrige side" style= "color:orange; margin-left:-20px">Forrige</a>
             </li>
         </ul> `;
 
