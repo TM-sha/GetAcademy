@@ -31,8 +31,9 @@ function toggleList() {
         </li><br>
         
         <li>
-            <a href="https://TM-sha.github.io/GetAcademy/Return" title="Gå til"><code>Return</code></a>
+            <a href="https://TM-sha.github.io/GetAcademy/Return" title="Gå til"><code>Return</code></a><br><br>
             <a href="https://TM-sha.github.io/GetAcademy/SideTre/" style="float: right; color: orange;">Neste</a>
+            <a href="https://TM-sha.github.io/GetAcademy/index.html" style="float: left; color: orange;">Forrige</a><br><br>
         </li>
         
             
