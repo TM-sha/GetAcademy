@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid lightgray;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 4px;
+        }
+
+        th {
+            background-color: darkblue;
+            border: 1px solid darkblue;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // Model
+        var tasks = [
+            { date: '2023-09-30', description: 'Handle til middag', person: 'Arthur', isDone: true, completedDate: "2023-09-16" },
+            { date: '2023-09-30', description: 'Lage middag', person: 'Ellen', isDone: false, completedDate: null },
+            { date: '2023-09-30', description: 'Spise middag', person: 'Tommy', isDone: false, completedDate: null },
+        ];
+        let taskDescriptionInput = "";
+        let personInput = "";
+        let dateInput = "";
+
+        //View
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <table id="tasksTable">${generateTable()}</table>
+                <p>
+                    <input id="taskPerson" type="text" placeholder="Person" onchange="personInput = this.value"/>                   
+                    <input id="taskDescription" type="text" placeholder="Description" onchange="taskDescriptionInput = this.value"/>
+                    <input id="dateDescription" type="date" placeholder="Date" onchange="dateInput = this.value"/>
+                    <button onclick="addTask()">Legg til oppgave</button>
+                </p>
+            `;
+        }
+
+        function generateTable() {
+            let html = /*HTML*/`
+                <tr>
+                    <th>Hvem?</th>
+                    <th>Oppgave</th>
+                    <th>Frist</th>
+                    <th>Gjort</th>
+                    <th>Gjort dato</th>
+                    <th></th>
+                </tr>
+            `;
+            for (let i = 0; i < tasks.length; i++) {
+                html += createHtmlRow(i);
+            }
+
+            return html;
+        }
+
+        function createHtmlRow(i) {
+            const task = tasks[i];
+            const checkedHtml = task.isDone ? 'checked="checked"' : '';
+            if (!task.editMode)
+                return /*HTML*/`
+                    <tr>
+                        <td>${task.person}</td>
+                        <td>${task.description}</td>
+                        <td>${convertDate(task.date)}</td>
+                        <td><input onchange="changeIsDone(this, ${i})" type="checkbox" ${checkedHtml} /></td>
+                        <td>${task.completedDate == null ? "Not completed" : convertDate(task.completedDate)}</td>
+                        <td>
+                            <button onclick="deleteTask(${i})">Slett</button>
+                            <button onclick="editTask(${i})">Rediger</button>
+                        </td>
+                    </tr>
+                    `;
+            return /*HTML*/`
+                <tr>
+                    <td><input id="editPerson${i}" type="text" value="${task.person}"/></td>
+                    <td><input id="editDescription${i}" type="text" value="${task.description}"/></td>
+                    <td><input id="editDate${i}" type="date" value="${task.date}"/></td>
+                    <td><input onchange="changeIsDone(this, ${i})" type="checkbox" ${checkedHtml} /></td>
+                    <td><input id="editCompletedDate${i}" type="date" value="${task.completedDate}"/></td>
+                    <td><button onclick="updateTask(${i})">Lagre</button></td>
+                </tr>
+            `;
+        }
+
+        //Controller
+        function addTask() {
+            let formattedDate = convertDate(dateInput);
+            tasks.push({
+                date: formattedDate,
+                person: personInput,
+                description: taskDescriptionInput,
+                isDone: false,
+                completedDate: null,
+            });
+            taskDescriptionInput = '';
+            personInput = '';
+            dateInput = '';
+
+            updateView();
+        }
+
+        function changeIsDone(checkbox, index) {
+            let dateNow = new Date().toISOString().slice(0, 10); //2023-09-19
+            tasks[index].isDone = checkbox.checked;
+            tasks[index].completedDate = dateNow;
+            updateView();
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            updateView();
+        }
+
+        function editTask(index) {
+            tasks[index].editMode = true;
+            updateView();
+        }
+
+        function updateTask(index) {
+            const id1 = `editDescription${index}`;
+            const id2 = `editPerson${index}`;
+            const id3 = `editDate${index}`;
+
+            const inputTag = document.getElementById(id1);
+            const personTag = document.getElementById(id2);
+            const dateTag = document.getElementById(id3);
+
+            const task = tasks[index];
+            task.description = inputTag.value;
+            task.person = personTag.value;
+            task.date = dateTag.value;
+            task.editMode = false;
+
+            updateView();
+        }
+
+        function convertDate(inputDate) {
+            let date = new Date(inputDate).toLocaleDateString(); //maskinens dato format
+            if (date == "Invalid Date") return '';
+            return date;
+        }
+
+        updateView();
+    </script>
+</body>
+
+</html>
