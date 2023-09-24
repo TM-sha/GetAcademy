@@ -48,7 +48,7 @@
     <div id="app"></div>
 
     <script>
-        let answer = ['Yes', "I can't tell you that!!", 'One day, maybe', 'Definitely', 'Perhaps', 'I dont think so', 'Sure', 'Hell no!', 'Absolutely!', 'I think so', 'Ask another question', "It's not impossible", 'If you try harder', 'Ask yourself instead', 'Not this year', 'No way!'];
+        let answer = ['Yes', "I can't tell you that!", 'One day, maybe', 'Definitely', 'Perhaps', 'I dont think so', 'Sure', 'Hell no!', 'Absolutely!', 'I think so', 'Ask another question', "It's not impossible", 'If you try harder', 'Ask yourself instead', 'Not this year', 'No way!'];
         let memory;
 
 
@@ -63,7 +63,7 @@
 
 
         function pressForAnswers() {
-            let random = Math.floor(Math.random() * 15);
+            let random = Math.round(Math.random() * 15);
             if (answer[random] == memory) {
                 pressForAnswers();
             }
