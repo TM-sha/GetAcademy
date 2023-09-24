@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays/Lister</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+
+    <script>
+        // model
+        let inventoryString = '';
+        let wares = ['Sovepose', 'Vann', 'Pølser', 'Øks', 'Lighter', 'Engangsgrill', 'Telt', 'Kull'];
+        let inventory = {
+            'Sovepose': 0,
+            'Vann': 0,
+            'Pølser': 0,
+            'Øks': 0,
+            'Lighter': 0,
+            'Engangsgrill': 0,
+            'Telt' : 0,
+            'Kull' : 0,
+        }
+
+        // view
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <div id="inventory">${loadInventory()}</div>
+                <button onclick="buy()">Add to cart</button>
+                <div>${showInventory()}</div>
+            `;
+        }
+
+
+        // controller
+        function buy() {
+            let wares = document.querySelectorAll('input[type="checkbox"]');
+            wares.forEach((checkbox) => {
+                if (checkbox.checked && inventory.hasOwnProperty(checkbox.id)) {
+                    inventory[checkbox.id]++;
+                }
+                else if (checkbox.checked && !inventory.hasOwnProperty(checkbox.id)) { 
+                    inventory[checkbox.id] = 1;
+                }
+            });
+            updateView();
+        }
+
+        function loadInventory() {
+            let returnString = "";
+            for (i = 0; i < wares.length; i++) {
+                console.log(wares.length)
+                returnString += /*HTML*/`
+                    <input type="checkbox" id="${wares[i]}"/>
+                    <label for="${wares[i]}">${wares[i]}</label><br>
+                `;
+            }
+            return returnString + "<br>";
+        }
+
+        function showInventory(ware) {
+            let returnString = "";
+            for (let ware in inventory) { 
+                if (inventory[ware] > 0) { 
+                    if (returnString !== "") {
+                        returnString += "  <br>"; 
+                    }
+                    returnString += ware; 
+
+                    if (inventory[ware] > 1) {
+                        returnString += ` x${inventory[ware]}`;
+                    }
+                }
+            }
+            return returnString;
+        }
+        updateView();
+    </script>
+</body>
+
+</html>
