@@ -33,6 +33,7 @@ function toggleList() {
         </ul> `;
 
         list = true;
+        
     } else if (list == true) {
         document.getElementById("divList").innerHTML = '';
         list = false;

@@ -7,6 +7,11 @@ function letter(element, color) {
     element.style.color = color;
 }
 
+function spaceCap() {
+    display.innerHTML += ` &nbsp `;
+}
+
+
 function capsLock() {
     if (upperOn == false) {
         display.style.textTransform = 'uppercase';
